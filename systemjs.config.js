@@ -12,6 +12,7 @@
     map: {
       // our app is within the app folder
       app: 'app',
+      'ng2-swapi':   'node_modules/ng2-swapi',
 
       // angular bundles
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
@@ -33,6 +34,7 @@
         main: './main.js',
         defaultExtension: 'js'
       },
+      'ng2-swapi': { main: 'index.js', defaultExtension: 'js' },
       rxjs: {
         defaultExtension: 'js'
       }
