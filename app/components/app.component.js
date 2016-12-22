@@ -9,9 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ng2_swapi_1 = require('../node_modules/ng2-swapi');
-var endpoint_1 = require('./endpoint');
-require('./rxjs-operators');
+var ng2_swapi_1 = require('../../node_modules/ng2-swapi');
+var endpoint_1 = require('../entities/endpoint');
+require('../libraries/rxjs-operators');
 var AppComponent = (function () {
     function AppComponent(swapi) {
         this.swapi = swapi;
@@ -126,13 +126,11 @@ var AppComponent = (function () {
         this.getDetails(this.url);
         //this.resetForm();
     };
-    AppComponent.prototype.resetForm = function () {
-        this.url = new endpoint_1.Endpoint();
-    };
     AppComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-app',
-            template: "\n<h3>Request</h3>\n<form>\n     <div class=\"form-group\">\n      <label for=\"resources\">Resources</label>\n      <select class=\"form-control\" required [(ngModel)]=\"url.resource\" name=\"resources\">\n          <option *ngFor=\"let r of resources\" [value]=\"r\">{{r}}</option>\n      </select>\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"index\">Index</label>\n      <input type=\"number\" [(ngModel)]=\"url.index\" name=\"quantity\" min=\"0\" required>\n    </div>\n\n    <div class=\"form-group\">\n      <input type=\"checkbox\" name=\"wookie\" [(ngModel)]=\"url.wookiee\" /> Wookiee\n    </div>\n\n    <button type=\"submit\" class=\"btn btn-default\" (click)=\"onSubmit()\">Submit</button>\n\n  </form>\n\n<h3>Response:</h3>\n<pre>{{ res | json}}</pre>\n<div style=\"color:red\">{{ errorMessage }}</div>\n  ",
+            templateUrl: './views/app.component.html',
             providers: [ng2_swapi_1.SwapiService]
         }), 
         __metadata('design:paramtypes', [ng2_swapi_1.SwapiService])
