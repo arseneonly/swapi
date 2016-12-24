@@ -1,4 +1,4 @@
-export class Endpoint {
+export class RequestSW {
   constructor(
     public resource: string = 'root',
     public index: number = 0,

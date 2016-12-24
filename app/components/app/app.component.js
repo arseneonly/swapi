@@ -9,9 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ng2_swapi_1 = require('../../node_modules/ng2-swapi');
-var endpoint_1 = require('../entities/endpoint');
-require('../libraries/rxjs-operators');
+var ng2_swapi_1 = require('../../../node_modules/ng2-swapi');
+var request_sw_1 = require('../../entities/request-sw');
+require('../../libraries/rxjs-operators');
 var AppComponent = (function () {
     function AppComponent(swapi) {
         this.swapi = swapi;
@@ -36,7 +36,7 @@ var AppComponent = (function () {
             'specie schema',
             'planet schema'
         ];
-        this.url = new endpoint_1.Endpoint();
+        this.url = new request_sw_1.RequestSW();
     }
     AppComponent.prototype.getDetails = function (req) {
         var _this = this;
@@ -130,7 +130,7 @@ var AppComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
-            templateUrl: './views/app.component.html',
+            templateUrl: './app.component.html',
             providers: [ng2_swapi_1.SwapiService]
         }), 
         __metadata('design:paramtypes', [ng2_swapi_1.SwapiService])

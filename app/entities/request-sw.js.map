@@ -1,0 +1,1 @@
+{"version":3,"file":"request-sw.js","sourceRoot":"","sources":["request-sw.ts"],"names":[],"mappings":";AAAA;IACE,mBACS,QAAyB,EACzB,KAAiB,EACjB,OAAwB;QAF/B,wBAAgC,GAAhC,iBAAgC;QAChC,qBAAwB,GAAxB,SAAwB;QACxB,uBAA+B,GAA/B,eAA+B;QAFxB,aAAQ,GAAR,QAAQ,CAAiB;QACzB,UAAK,GAAL,KAAK,CAAY;QACjB,YAAO,GAAP,OAAO,CAAiB;IAC5B,CAAC;IACR,gBAAC;AAAD,CAAC,AAND,IAMC;AANY,iBAAS,YAMrB,CAAA"}

@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { NgForm }    from '@angular/forms';
 
-import { SwapiService } from '../../node_modules/ng2-swapi';
-import { Endpoint } from '../entities/endpoint';
-import '../libraries/rxjs-operators';
+import { SwapiService } from '../../../node_modules/ng2-swapi';
+import { RequestSW } from '../../entities/request-sw';
+import '../../libraries/rxjs-operators';
 
 @Component({
   moduleId: module.id,
   selector: 'my-app',
-  templateUrl: './views/app.component.html',
+  templateUrl: './app.component.html',
   providers: [ SwapiService ]
 })
 export class AppComponent  { 
@@ -36,11 +36,11 @@ export class AppComponent  {
     'specie schema',
     'planet schema'
   ];
-  url = new Endpoint();
+  url = new RequestSW();
 
   constructor (private swapi: SwapiService) { }
 
-  getDetails(req: Endpoint) {
+  getDetails(req: RequestSW) {
 
       switch(req.resource){
         case this.resources[0]:
